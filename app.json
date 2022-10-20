@@ -1,5 +1,6 @@
 {
   "expo": {
+    "userInterfaceStyle": "light",
     "name": "DiplomV1",
     "slug": "DiplomV1",
     "version": "1.0.0",
@@ -23,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "diplom.apk"
     },
     "web": {
       "favicon": "./assets/favicon.png"

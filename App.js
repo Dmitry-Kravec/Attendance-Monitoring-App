@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
 
-export default function App() {
+import { Provider } from "react-redux";
+import store from "./src/redux/store";
+
+import appServiceContext from "./src/components/app-service-context";
+// import AppService from "./services/appService";
+import ApiServiceAxios from "./src/services/apiServiceAxiosAPI";
+import MainComponent from "./src/components/main-component";
+
+// const appService = new AppService();
+const appService = new ApiServiceAxios();
+
+const App = () => {
+  const { Provider: AppServiceProvider } = appServiceContext;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <AppServiceProvider value={appService}>
+        <MainComponent />
+      </AppServiceProvider>
+    </Provider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
