@@ -6,22 +6,16 @@ const styles = StyleSheet.create({
         marginTop: 16,
         minWidth: 200,
         width: screenDimensionsWidth * 0.75,
-        // height: screenDimensionsHeight / 4,
         borderWidth: 1,
         padding: 1,
-        // backgroundColor: "blue",
     },
     list: {
-        // paddingTop: 2,
-        // borderWidth: 1,
-        // backgroundColor: "red",
+        height: screenDimensionsHeight * 0.25,
     },
     listHeader: {
-        // marginBottom: 4,
         borderBottomWidth: 1,
     },
     emptyList: {
-        // backgroundColor: "red",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

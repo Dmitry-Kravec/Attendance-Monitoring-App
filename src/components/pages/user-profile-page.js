@@ -18,7 +18,6 @@ const UserProfilePage = ({ userExit, ...otherProps }) => {
 
 const styles = StyleSheet.create({
     userProfileContainer: {
-        // backgroundColor: "red",
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",

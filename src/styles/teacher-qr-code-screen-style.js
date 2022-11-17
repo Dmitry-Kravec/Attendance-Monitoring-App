@@ -1,14 +1,11 @@
 import { StyleSheet } from "react-native";
-import { screenDimensionsWidth, screenDimensionsHeight } from "../constants";
+import { screenDimensionsWidth } from "../constants";
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         display: "flex",
         flexGrow: 1,
-        // alignItems: "center",
         justifyContent: "flex-start",
-        // backgroundColor: "red",
     },
     qr: {},
     newCodeButton: {
@@ -21,8 +18,6 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        // backgroundColor: "green",
-        // marginTop: screenDimensionsHeight / 10,
     },
     qrSize: screenDimensionsWidth * 0.8,
 });

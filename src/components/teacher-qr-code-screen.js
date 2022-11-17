@@ -1,14 +1,6 @@
-import React, { useContext, useEffect } from "react";
-import {
-    StyleSheet,
-    View,
-    Text,
-    ActivityIndicator,
-    Button,
-} from "react-native";
+import React, { useContext } from "react";
+import { View, Text, ActivityIndicator } from "react-native";
 import { connect } from "react-redux";
-
-import { screenDimensionsWidth } from "../constants";
 
 import { fetchTeacherQr, teacherQrReset } from "../redux/actions";
 import appServiceContext from "./app-service-context";
@@ -28,14 +20,6 @@ const TeacherQrCodeScreen = ({
     lessonInfoID,
 }) => {
     const apiService = useContext(appServiceContext);
-
-    // useEffect(() => {
-    //     const intervalId = setInterval(() => {
-    //         fetchTeacherQr(apiService)(lessonInfoID);
-    //     }, 5000);
-
-    //     return () => clearInterval(intervalId);
-    // }, []);
 
     let body;
 
@@ -64,7 +48,7 @@ const TeacherQrCodeScreen = ({
 
                 <View style={styles.newCodeButton}>
                     <CustomButton
-                        title="Запросить новый код"
+                        title="Получить новый код"
                         onPress={() => {
                             fetchTeacherQr(apiService)(lessonInfoID);
                         }}
@@ -77,7 +61,6 @@ const TeacherQrCodeScreen = ({
     return (
         <View style={styles.container}>
             <BackButton handler={teacherQrReset} />
-
             {body}
         </View>
     );

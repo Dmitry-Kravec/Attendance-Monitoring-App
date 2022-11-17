@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { View, Text, ActivityIndicator, TouchableOpacity } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import { connect } from "react-redux";
 
 import {

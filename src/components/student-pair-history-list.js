@@ -10,8 +10,6 @@ import useFlatListFetchData from "./hooks/useFlatListFetchData";
 import StudentPairHistoryListItem from "./student-pair-history-list-item";
 import FlatListEmptyComponent from "./flat-list-empty-component";
 
-// import styles from "../styles/student-pair-history-list-style";
-// import styles from "../styles/teacher-lesson-list-style";
 import styles from "../styles/main-user-item-list-style";
 
 const StudentPairHistoryList = ({

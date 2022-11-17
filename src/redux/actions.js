@@ -60,11 +60,9 @@ const fetchLogin = (dispatch) => (appService) => (userData) => {
     appService
         .login(userData)
         .then((user) => {
-            // console.log("fetchLogin user:", user.data);
             dispatch(loginIsOK(user.data));
         })
         .catch((err) => {
-            //console.log("fetchLogin ERror:", err);
             dispatch(loginError(err));
         });
 };
@@ -75,11 +73,9 @@ const fetchStudentPairHistory = (dispatch) => (appService) => (email) => {
     appService
         .getStudentPairsHistory(email)
         .then((pairList) => {
-            // console.log("fetchStudentPairHistory pairList:", pairList.data);
             dispatch(pairHistoryOK(pairList.data));
         })
         .catch((err) => {
-            //console.log("fetchStudentPairHistory ERror:", err);
             dispatch(pairHistoryError(err));
         });
 };
@@ -91,17 +87,9 @@ const fetchSendStudentQrCode = (dispatch) => (appService) => (user, qrCode) => {
     appService
         .sendStudentQrCode(user, qrCode)
         .then((respons) => {
-            //console.log("fetchSendStudentQrCode:", respons);
             dispatch(studentQRSendOK(respons.data));
         })
         .catch((err) => {
-            /*
-        err.response
-                    .data.message
-                    .request.status
-      */
-            //console.log("fetchSendStudentQrCodeERROR:", err.response.data.message);
-            //console.log("fetchSendStudentQrCodeERROR:", err.response.request.status);
             dispatch(
                 studentQRSendError(
                     err.response.data.message,
@@ -117,11 +105,9 @@ const fetchTeacherLessonList = (dispatch) => (appService) => (email) => {
     appService
         .getTeacherLessons(email)
         .then((lessonList) => {
-            //console.log("fetchTeacherLessonList lessonList:", lessonList.data);
             dispatch(teacherLessonListOK(lessonList.data));
         })
         .catch((err) => {
-            //console.log("fetchTeacherLessonList ERror:", err);
             dispatch(teacherLessonListError(err));
         });
 };
@@ -129,15 +115,12 @@ const fetchTeacherLessonList = (dispatch) => (appService) => (email) => {
 const fetchTeacherLessonInfo = (dispatch) => (appService) => (lessonID) => {
     dispatch(teacherLessonInfoRequested());
 
-    //console.log("fetchTeacherLessonInfo LESSOnId", lessonID);
     appService
         .getTeacherLessonInfo(lessonID)
         .then((lessonInfo) => {
-            //console.log("fetchLessonInfo lessonInfo:", lessonInfo.data);
             dispatch(teacherLessonInfoOK(lessonInfo.data));
         })
         .catch((err) => {
-            //console.log("fetchLessonInfo ERror:", err);
             dispatch(teacherLessonInfoError(err));
         });
 };
@@ -156,14 +139,11 @@ const fetchTeacherQr =
             appServiceMethod = appService.refreshPairQr;
         }
 
-        //console.log("fetchTeacherQr Id", ID);
         appServiceMethod(ID)
             .then((lessonInfo) => {
-                //console.log("fetchTeacherQr QrInfo:", lessonInfo.data);
                 dispatch(teacherQrOK(lessonInfo.data));
             })
             .catch((err) => {
-                //console.log("fetchTeacherQr ERror:", err);
                 dispatch(teacherQrError(err));
             });
     };

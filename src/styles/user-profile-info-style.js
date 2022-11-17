@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",
-        // backgroundColor: "red",
         height: 150,
     },
     userInfoContainer_firstLastName: {
@@ -21,10 +20,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         width: 250,
-        // backgroundColor: "green",
         borderBottomWidth: 1,
-        // borderBottomStartRadius: 60,
-        // borderBottomEndRadius: 50,
     },
     userInfoContainer_field: {
         fontSize: 16,

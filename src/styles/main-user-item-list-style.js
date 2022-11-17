@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { screenDimensionsWidth, screenDimensionsHeight } from "../constants";
+import { screenDimensionsWidth } from "../constants";
 
 const styles = StyleSheet.create({
     ListHeaderComponentStyle: {
@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
         paddingLeft: screenDimensionsWidth * 0.05,
         paddingRight: screenDimensionsWidth * 0.05,
         width: screenDimensionsWidth,
-        // backgroundColor: "orange",
     },
 
     textHeader: {
@@ -16,7 +15,6 @@ const styles = StyleSheet.create({
     },
 
     contentContainerStyle: {
-        // backgroundColor: "red",
         display: "flex",
         alignItems: "center",
     },

@@ -1,12 +1,5 @@
 import React from "react";
-import {
-    StyleSheet,
-    View,
-    Text,
-    ActivityIndicator,
-    TouchableOpacity,
-    FlatList,
-} from "react-native";
+import { Text, TouchableOpacity, FlatList } from "react-native";
 import { connect } from "react-redux";
 
 import TeacherLessonListItem from "./teacher-lesson-list-item";
@@ -17,7 +10,6 @@ import { fetchTeacherLessonList, chooseLessonInfoID } from "../redux/actions";
 import useFlatListState from "./hooks/useFlatListState";
 import useFlatListFetchData from "./hooks/useFlatListFetchData";
 
-// import styles from "../styles/teacher-lesson-list-style";
 import styles from "../styles/main-user-item-list-style";
 
 const TeacherLessonList = ({
