@@ -7,7 +7,14 @@ const styles = StyleSheet.create({
     },
     createButtonView: {
         marginTop: 12,
+        width: "50%",
     },
+    titleAndButtonContainer: {
+        height: "25%",
+        display: "flex",
+        alignItems: "center",
+    },
+    listsContainer: { height: "60%" },
     touchableOp: {
         height: 35,
         backgroundColor: "#C6E05C",

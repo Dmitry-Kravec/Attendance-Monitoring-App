@@ -74,7 +74,7 @@ export default class ApiServiceAxios {
 
     sendStudentQrCode = async (user, qrCode) => {
         const { email } = user;
-        const response = await $host.post(`api/student/sendqr`, {
+        const response = await $host.put(`api/student/sendqr`, {
             studentQrCode: qrCode,
             email,
         });

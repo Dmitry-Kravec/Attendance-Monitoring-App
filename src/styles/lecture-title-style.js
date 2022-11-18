@@ -1,10 +1,12 @@
 import { StyleSheet } from "react-native";
-import { screenDimensionsWidth } from "../constants";
+import { screenDimensionsWidth, screenDimensionsHeight } from "../constants";
 
 const styles = StyleSheet.create({
     lectureTitleView: {
         backgroundColor: "#EAFE6E",
-        height: 130,
+        minHeight: screenDimensionsHeight * 0.1,
+        maxHeight: "80%",
+        height: "70%",
         width: "100%",
         display: "flex",
         justifyContent: "center",

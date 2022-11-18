@@ -5,8 +5,10 @@ const styles = StyleSheet.create({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        marginBottom: 16,
     },
     text: {
+        marginTop: 10,
         marginBottom: 20,
     },
 });

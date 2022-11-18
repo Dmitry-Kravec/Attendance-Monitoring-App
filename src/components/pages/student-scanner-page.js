@@ -1,5 +1,5 @@
 import React from "react";
-import { View, ActivityIndicator } from "react-native";
+import { StyleSheet, View, ActivityIndicator } from "react-native";
 import { connect } from "react-redux";
 import StudentQrScanner from "../student-qr-scanner";
 
@@ -20,7 +20,7 @@ const StudentScannerPage = ({
         qrServerResponseStatus;
 
     return (
-        <View>
+        <View style={styles.container}>
             {!hideScannerFlag ? <StudentQrScanner /> : null}
 
             {qrServerResponseWaiting ? (
@@ -41,6 +41,14 @@ const StudentScannerPage = ({
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flexGrow: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+});
 
 const mapStateToProps = ({
     student: {

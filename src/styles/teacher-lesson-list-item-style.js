@@ -10,6 +10,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         width: screenDimensionsWidth * 0.9,
+        paddingLeft: 5,
+        paddingRight: 5,
     },
     text: {
         textAlign: "center",

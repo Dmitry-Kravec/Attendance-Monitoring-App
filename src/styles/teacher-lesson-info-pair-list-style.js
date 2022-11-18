@@ -7,11 +7,10 @@ const styles = StyleSheet.create({
         minWidth: 200,
         borderWidth: 1,
         padding: 1,
-        width: screenDimensionsWidth * 0.75,
+        width: screenDimensionsWidth * 0.8,
+        height: "45%",
     },
-    list: {
-        height: screenDimensionsHeight * 0.25,
-    },
+    list: {},
     listHeader: {
         marginBottom: 4,
         borderBottomWidth: 1,

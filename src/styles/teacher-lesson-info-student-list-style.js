@@ -5,13 +5,12 @@ const styles = StyleSheet.create({
     container: {
         marginTop: 16,
         minWidth: 200,
-        width: screenDimensionsWidth * 0.75,
+        width: screenDimensionsWidth * 0.8,
         borderWidth: 1,
         padding: 1,
+        height: "45%",
     },
-    list: {
-        height: screenDimensionsHeight * 0.25,
-    },
+    list: {},
     listHeader: {
         borderBottomWidth: 1,
     },

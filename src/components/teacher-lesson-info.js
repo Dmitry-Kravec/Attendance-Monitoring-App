@@ -37,20 +37,24 @@ const TeacherLessonInfo = ({
     return (
         <View style={styles.container}>
             <BackButton handler={teacherLessonInfoReset} />
-            <LectureTitle lectureTitle={lessonInfo.name} />
-            <View style={styles.createButtonView}>
-                <CustomButton
-                    onPress={() => {
-                        fetchTeacherQr(apiService)(lessonInfoID, true);
-                    }}
-                    title="Создать занятие"
-                />
+            <View style={styles.titleAndButtonContainer}>
+                <LectureTitle lectureTitle={lessonInfo.name} />
+                <View style={styles.createButtonView}>
+                    <CustomButton
+                        onPress={() => {
+                            fetchTeacherQr(apiService)(lessonInfoID, true);
+                        }}
+                        title="Создать занятие"
+                    />
+                </View>
             </View>
 
-            <TeacherLessonInfoPairList pairsList={lessonInfo.pairsList} />
-            <TeacherLessonInfoStudentList
-                studentList={lessonInfo.studentList}
-            />
+            <View style={styles.listsContainer}>
+                <TeacherLessonInfoPairList pairsList={lessonInfo.pairsList} />
+                <TeacherLessonInfoStudentList
+                    studentList={lessonInfo.studentList}
+                />
+            </View>
         </View>
     );
 };

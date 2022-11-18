@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flexGrow: 1,
         alignItems: "center",
         justifyContent: "flex-start",
     },
@@ -14,6 +14,17 @@ const styles = StyleSheet.create({
         width: 300,
         overflow: "hidden",
     },
+    permissionContainer: {
+        display: "flex",
+        flexGrow: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    permissionCameraText: {
+        textAlign: "center",
+        marginBottom: 30,
+    },
+    barCodeScanner: { height: 600, width: 500 },
     buttonView: {
         marginTop: 40,
     },

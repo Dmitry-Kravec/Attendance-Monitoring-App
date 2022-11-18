@@ -16,12 +16,15 @@ const CustomButton = ({ onPress, title = "NAME" }) => {
 const styles = StyleSheet.create({
     custom_button: {},
     custom_button__title: {
-        width: 170,
-        height: 35,
+        minWidth: 170,
+        minHeight: 35,
         textAlign: "center",
         textAlignVertical: "center",
         backgroundColor: "#C6E05C",
         borderRadius: 5,
+        padding: 5,
+        paddingLeft: 10,
+        paddingRight: 10,
     },
 });
 

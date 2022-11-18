@@ -37,15 +37,17 @@ const StudentQrScanner = ({ fetchSendStudentQrCode, user }) => {
 
     if (hasPermissons === null) {
         return (
-            <View>
+            <View style={styles.permissionContainer}>
                 <Text>Запрос на использование камеры</Text>
             </View>
         );
     }
     if (hasPermissons === false) {
         return (
-            <View>
-                <Text>Разрешите приложению использовать камеру</Text>
+            <View style={styles.permissionContainer}>
+                <Text style={styles.permissionCameraText}>
+                    Разрешите приложению использовать камеру:
+                </Text>
                 <CustomButton
                     title="Разрешить доступ к камере"
                     onPress={askCameraPermission}
@@ -59,7 +61,7 @@ const StudentQrScanner = ({ fetchSendStudentQrCode, user }) => {
             <View style={styles.barCodeBox}>
                 <BarCodeScanner
                     onBarCodeScanned={handleBarCodeScanned}
-                    style={{ height: 600, width: 500 }}
+                    style={styles.barCodeScanner}
                 />
             </View>
             <View style={styles.buttonView}>

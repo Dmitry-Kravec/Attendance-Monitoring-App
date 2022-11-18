@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         marginTop: 3,
-        width: 300,
+        width: "100%",
         height: 40,
         display: "flex",
         justifyContent: "space-around",
